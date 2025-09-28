@@ -36,6 +36,20 @@ public class TemperatureConverterTest {
     }
 
     @Test
+    public void testKelvinToCelsius() {
+        double celsius = converter.kelvinToCelsius(300);
+        System.out.println("\n300 Kelvin in Celsius: " + celsius);
+        double celsiusIsZero = converter.kelvinToCelsius(273.15);
+        System.out.println("273.15 Kelvin in Celsius: " + celsiusIsZero);
+        double celsiusIsNegative = converter.kelvinToCelsius(233.15);
+        System.out.println("233.15 Kelvin in Celsius: " + celsiusIsNegative);
+
+        assertEquals(26.85, converter.kelvinToCelsius(300), 0.01);
+        assertEquals(0, converter.kelvinToCelsius(273.15), 0.01);
+        assertEquals(-40, converter.kelvinToCelsius(233.15), 0.01);
+    }
+
+    @Test
     public void testIsExtremeTemperature() {
         boolean isExtremeLow = converter.isExtremeTemperature(-50);
         System.out.println("\n-50 Celsius is extreme: " + isExtremeLow);
