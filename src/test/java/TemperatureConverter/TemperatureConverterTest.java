@@ -24,7 +24,7 @@ public class TemperatureConverterTest {
     @Test
     public void testCelsiusToFahrenheit() {
         double fahrenheit = converter.celsiusToFahrenheit(21.11);
-        System.out.println("21.11 Celsius in Fahrenheit: " + fahrenheit);
+        System.out.println("\n21.11 Celsius in Fahrenheit: " + fahrenheit);
         double fahrenheitIsZero = converter.celsiusToFahrenheit(0);
         System.out.println("0 Celsius in Fahrenheit: " + fahrenheitIsZero);
         double fahrenheitIsNegative = converter.celsiusToFahrenheit(-40);
@@ -38,7 +38,7 @@ public class TemperatureConverterTest {
     @Test
     public void testIsExtremeTemperature() {
         boolean isExtremeLow = converter.isExtremeTemperature(-50);
-        System.out.println("-50 Celsius is extreme: " + isExtremeLow);
+        System.out.println("\n-50 Celsius is extreme: " + isExtremeLow);
         boolean isNotExtreme = converter.isExtremeTemperature(20);
         System.out.println("20 Celsius is extreme: " + isNotExtreme);
         boolean isExtremeHigh = converter.isExtremeTemperature(60);
