@@ -5,7 +5,8 @@ import javafx.scene.control.Label;
 
 public class Database {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/temperature_converter";
+    private static final String URL = "jdbc:mysql://host.docker.internal:3306/temperature_converter";
+//    private static final String URL = "jdbc:mysql://localhost:3306/temperature_converter";
     private static final String USER = "admin";
     private static final String PASSWORD = "admin";
 
