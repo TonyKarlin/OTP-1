@@ -2,14 +2,12 @@ package TemperatureConverter;
 
 import java.sql.*;
 import javafx.scene.control.Label;
-import io.github.cdimascio.dotenv.Dotenv;
 
 public class Database {
 
-    private static final Dotenv dotenv = Dotenv.load();
-    private static final String URL = dotenv.get("DB_URL");
-    private static final String USER = dotenv.get("DB_USER");
-    private static final String PASSWORD = dotenv.get("DB_PASSWORD");
+    private static final String URL = "jdbc:mysql://localhost:3306/temperature_converter";
+    private static final String USER = "admin";
+    private static final String PASSWORD = "admin";
 
     public static void saveTemperature(double celsius, double fahrenheit, Label statusLabel) {
         String sql = "INSERT INTO temperature_log (celsius, fahrenheit) VALUES (?, ?)";
